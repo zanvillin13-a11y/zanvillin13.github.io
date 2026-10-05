@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas en línea</title>
+    <meta name="description" content="Tienda de tecnología con productos destacados y servicios de venta en línea.">
+    <link rel="stylesheet" href="p1.css">
+</head>
+<body>
+    <!-- Encabezado principal de la página con marca y navegación -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="imagenes/online-store-logo-option-b.png" alt="Logo de la tienda" class="brand-mark">
+                <h1>Ventas en línea</h1>
+            </div>
+
+            <!-- Botón de menú para versiones móviles -->
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+            <!-- Navegación principal con submenús para categorías -->
+            <nav class="main-nav" aria-label="Menú principal">
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+
+                    <li class="dropdown">
+                        <button class="menu-trigger" type="button" aria-expanded="false">Catálogo</button>
+                        <ul class="submenu">
+                            <li><a href="#cat-laptops">Laptops</a></li>
+                            <li><a href="#cat-celulares">Celulares</a></li>
+                            <li><a href="#cat-gaming">Gaming</a></li>
+                            <li><a href="#cat-componentes">Componentes de PC</a></li>
+                            <li><a href="#cat-impresoras">Impresoras</a></li>
+                            <li><a href="#cat-accesorios">Accesorios</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="menu-trigger" type="button" aria-expanded="false">Cómo comprar</button>
+                        <ul class="submenu">
+                            <li><a href="#contactForm">Cuotas</a></li>
+                            <li><a href="#contactForm">Pago online</a></li>
+                            <li><a href="#contactForm">Pago en efectivo</a></li>
+                            <li><a href="#contactForm">Compra al por mayor</a></li>
+                            <li><a href="#contactForm">Compra individual</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <button class="menu-trigger" type="button" aria-expanded="false">Sucursales</button>
+                        <ul class="submenu">
+                            <li><a href="#sucursales" data-branch-index="0">Lima</a></li>
+                            <li><a href="#sucursales" data-branch-index="1">Chiclayo</a></li>
+                            <li><a href="#sucursales" data-branch-index="2">Tarapoto</a></li>
+                            <li><a href="#sucursales" data-branch-index="3">Cajamarca</a></li>
+                            <li><a href="#sucursales" data-branch-index="4">Huancayo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección principal con texto promocional y una imagen destacada -->
+    <main class="container">
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="eyebrow">Tecnología moderna</p>
+                <h2>Soluciones inteligentes para tu trabajo y entretenimiento.</h2>
+                <p>
+                    Descubre equipos y accesorios de última generación con asesoría especializada,
+                    entregas rápidas y atención personalizada.
+                </p>
+                <div class="hero-actions">
+                    <a href="#productos" class="btn btn-primary">Ver productos</a>
+                    <a href="#contacto" class="btn btn-secondary">Contactar</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="glow"></div>
+                <img src="imagenes/caratula.jpg" alt="Equipo tecnológico">
+            </div>
+        </section>
+
+        <section class="about-section" id="nosotros">
+            <p class="eyebrow">Quiénes somos</p>
+            <h2>Tecnología para cada necesidad</h2>
+            <p>En Ventas en línea encuentras equipos y accesorios para estudiar, trabajar y disfrutar. 
+            Explora el catálogo y contáctanos si necesitas orientación para elegir.</p>
+        </section>
+
+        <!-- Sección de productos: aquí se mejoró la estructura para que cada tarjeta funcione como un cuadro visual -->
+        <section id="productos" class="products">
+            <div class="section-heading section-heading-with-cart">
+                <div>
+                    <p class="eyebrow">Catálogo</p>
+                    <h2>Productos destacados</h2>
+                </div>
+                <button class="cart-toggle" id="cartToggle" type="button" aria-label="Abrir carrito" aria-haspopup="dialog">
+                    <span aria-hidden="true">🛒</span>
+                    <span>Carrito</span>
+                    <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+                </button>
+            </div>
+
+            <div class="products-grid">
+                <article class="card" id="cat-laptops">
+                    <h3>Laptops</h3>
+                    <img src="imagenes/laptop.avif" alt="Ilustración de tecnología digital">
+                    <p>Opciones para estudiar, trabajar o jugar, con rendimiento y características para cada necesidad.</p>
+                    <button class="card-button" type="button">Añadir al carrito</button>
+                </article>
+
+                <article class="card" id="cat-celulares">
+                    <h3>Celulares</h3>
+                    <img class="product-image-centered" src="imagenes/celular.jpg" alt="Ilustración de tecnología y conectividad">
+                    <p>Smartphones para comunicarte, crear contenido y disfrutar tus aplicaciones favoritas.</p>
+                    <button class="card-button" type="button">Añadir al carrito</button>
+                </article>
+
+                <article class="card" id="cat-gaming">
+                    <h3>Gaming</h3>
+                    <img src="imagenes/mousepad.webp" alt="Ilustración de innovación tecnológica">
+                    <p>Equipos y accesorios pensados para jugar con comodidad y buen rendimiento.</p>
+                    <button class="card-button" type="button">Añadir al carrito</button>
+                </article>
+
+                <article class="card" id="cat-componentes">
+                    <h3>Componentes de PC</h3>
+                    <img src="imagenes/procesador.png" alt="Ilustración de tecnología digital">
+                    <p>Procesadores, tarjetas gráficas y componentes para armar o actualizar tu computadora.</p>
+                    <button class="card-button" type="button">Añadir al carrito</button>
+                </article>
+
+                <article class="card" id="cat-impresoras">
+                    <h3>Impresoras</h3>
+                    <img class="product-image-centered" src="imagenes/impresora.jpg" alt="Ilustración de tecnología y conectividad">
+                    <p>Alternativas para imprimir documentos y trabajos en casa, estudio u oficina.</p>
+                    <button class="card-button" type="button">Añadir al carrito</button>
+                </article>
+
+                <article class="card" id="cat-accesorios">
+                    <h3>Accesorios</h3>
+                    <img src="imagenes/moyse.webp" alt="Ilustración de innovación tecnológica">
+                    <p>Teclados, mouse, audífonos y complementos para mejorar tu día a día.</p>
+                    <button class="card-button" type="button">Añadir al carrito</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="branches-section" id="sucursales">
+            <div class="section-heading">
+                <p class="eyebrow">Atención presencial</p>
+                <h2>Nuestras sucursales</h2>
+                <p>Explora las ciudades donde puedes consultar por atención presencial.</p>
+            </div>
+
+            <div class="branch-carousel" aria-label="Carrusel de ubicaciones">
+                <button class="branch-arrow" id="branchPrevious" type="button" aria-label="Sucursal anterior" title="Sucursal anterior">‹</button>
+                <article class="branch-slide" id="branchSlide" aria-live="polite">
+                    <div class="branch-map-frame">
+                        <img class="branch-map-image" id="branchMap" src="https://tile.openstreetmap.org/11/585/1093.png" alt="Mapa referencial del centro de Lima">
+                    </div>
+                    <div class="branch-details">
+                        <p class="branch-counter" id="branchCounter">1 / 5</p>
+                        <h3 id="branchName">Lima</h3>
+                        <p>Mapa general de la ciudad; no señala la dirección exacta de la sucursal.</p>
+                        <a class="branch-link" id="branchContact" href="#contactForm" data-branch="Lima">Consultar esta sede</a>
+                    </div>
+                </article>
+                <button class="branch-arrow" id="branchNext" type="button" aria-label="Siguiente sucursal" title="Siguiente sucursal">›</button>
+            </div>
+            <p class="map-attribution">Mapas © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a></p>
+        </section>
+
+        <!-- Sección de contacto con imagen lateral y redes sociales -->
+        <section class="contact-section" id="contacto">
+            <div class="contact-image-box">
+                <img src="imagenes/n.jpg" alt="Persona atendiendo consultas">
+            </div>
+
+            <div class="contact-info">
+                <p class="eyebrow">Contactanos</p>
+                <h2>Estamos para ayudarte</h2>
+                <ul class="contact-list">
+                    <li><strong>Teléfono:</strong> +51 987 654 321</li>
+                    <li><strong>Email:</strong> ventas@tienda.com</li>
+                    <li><strong>Horario:</strong> Lunes a sábado, 9:00 a 18:00</li>
+                </ul>
+
+                <form class="contact-form" id="contactForm">
+                    <h3>Envíanos una consulta</h3>
+                    <div class="contact-form-grid">
+                        <label>
+                            Nombre
+                            <input type="text" name="name" autocomplete="name" required>
+                        </label>
+                        <label>
+                            Correo electrónico
+                            <input type="email" name="email" autocomplete="email" required>
+                        </label>
+                    </div>
+                    <label>
+                        Motivo de contacto
+                        <select name="subject" required>
+                            <option value="" selected disabled>Selecciona una opción</option>
+                            <option>Consulta sobre un producto</option>
+                            <option>Estado de un pedido</option>
+                            <option>Consulta sobre una sucursal</option>
+                            <option>Garantía o soporte</option>
+                            <option>Otro</option>
+                        </select>
+                    </label>
+                    <label>
+                        ¿Cómo deseas comprar?
+                        <select name="purchaseMethod">
+                            <option value="" selected>Elige una opción (opcional)</option>
+                            <option>Compra individual</option>
+                            <option>Compra al por mayor</option>
+                            <option>Pago en cuotas</option>
+                            <option>Pago online</option>
+                            <option>Pago en efectivo</option>
+                        </select>
+                    </label>
+                    <label>
+                        Mensaje
+                        <textarea name="message" rows="4" required></textarea>
+                    </label>
+                    <button class="contact-submit" type="submit">Enviar consulta</button>
+                    <p class="form-note" id="contactFormStatus" role="status" aria-live="polite">
+                        Se abrirá tu aplicación de correo para enviar el mensaje.
+                    </p>
+                </form>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-item">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook">
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-item">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-item">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" alt="WhatsApp">
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-item">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tiktok.svg" alt="TikTok">
+                        <span>TikTok</span>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-item">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube">
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X" class="social-item">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X">
+                        <span>X</span>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-item">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="social-item">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/pinterest.svg" alt="Pinterest">
+                        <span>Pinterest</span>
+                    </a>
+                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="social-item">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/telegram.svg" alt="Telegram">
+                        <span>Telegram</span>
+                    </a>
+                    <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="social-item">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg" alt="Discord">
+                        <span>Discord</span>
+                    </a>
+                </div>
+
+                <div class="qr-box">
+                    <h3>Escanea para entrar</h3>
+                    <img id="qrcode" width="150" height="150" alt="Código QR para abrir esta página">
+                    <p id="qrLabel">Dirección de esta página</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="cart-dialog" id="cartDialog" aria-labelledby="cartTitle">
+        <div class="cart-header">
+            <h2 id="cartTitle">Tu carrito</h2>
+            <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar carrito">×</button>
+        </div>
+        <div class="cart-body">
+            <p class="cart-empty" id="cartEmpty">Todavía no has añadido productos.</p>
+            <ul class="cart-items" id="cartItems" aria-live="polite"></ul>
+        </div>
+        <div class="cart-footer">
+            <p class="cart-note">Consulta precios y disponibilidad al enviar tu pedido.</p>
+            <div class="cart-actions">
+                <button class="cart-clear" id="clearCart" type="button">Vaciar</button>
+                <button class="cart-submit" id="submitOrder" type="button">Consultar por WhatsApp</button>
+            </div>
+        </div>
+    </dialog>
+
+    <div class="chatbot-widget" id="chatbotWidget">
+        <button class="chatbot-toggle" id="chatbotToggle" type="button" aria-label="Abrir chatbot">
+            💬
+        </button>
+
+        <div class="chatbot-panel" id="chatbotPanel">
+            <div class="chatbot-header">
+                <h3>Asistente virtual</h3>
+                <button type="button" class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    Hola, puedo ayudarte con pedidos, pagos, envío, garantías y más. Pregúntame algo.
+                </div>
+            </div>
+
+            <div class="chatbot-input-row">
+                <input type="text" id="chatbotInput" placeholder="Escribe tu pregunta..." aria-label="Pregunta del chatbot">
+                <button type="button" id="sendChatbotMessage">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página con derechos reservados y año actualizado automáticamente -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <img src="imagenes/online-store-logo-option-b.png" alt="Logo de la tienda" class="footer-logo">
+            <p>© <span id="year"></span> Ventas en línea. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="p1.js"></script>
+</body>
+</html>
